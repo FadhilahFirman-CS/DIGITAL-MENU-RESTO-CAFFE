@@ -1,0 +1,71 @@
+{
+  "restaurant": {
+    "name": "Rasa Senja",
+    "tagline": "Kitchen & Coffee",
+    "description": "Tempat kecil untuk rasa yang hangat, kopi yang jujur, dan cerita yang tinggal lebih lama.",
+    "hours": "Setiap hari · 10.00–22.00",
+    "address": "Jl. Kemang Raya No. 18, Jakarta"
+  },
+  "categories": [
+    { "id": "all", "name": "Semua" },
+    { "id": "mains", "name": "Hidangan utama" },
+    { "id": "coffee", "name": "Kopi" },
+    { "id": "sweet", "name": "Manis" }
+  ],
+  "items": [
+    {
+      "id": "nasi-jeruk",
+      "category": "mains",
+      "name": "Nasi Ayam Jeruk",
+      "description": "Ayam panggang, sambal matah, dan nasi jeruk wangi.",
+      "price": 48000,
+      "available": true,
+      "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "pasta",
+      "category": "mains",
+      "name": "Pasta Truffle",
+      "description": "Tagliatelle lembut dengan jamur dan saus truffle.",
+      "price": 62000,
+      "available": true,
+      "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "kopi-senja",
+      "category": "coffee",
+      "name": "Kopi Senja",
+      "description": "House blend dengan notes karamel dan cokelat.",
+      "price": 28000,
+      "available": true,
+      "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "matcha",
+      "category": "coffee",
+      "name": "Matcha Cloud",
+      "description": "Matcha Jepang, susu creamy, dan foam lembut.",
+      "price": 36000,
+      "available": false,
+      "image": "https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "cake",
+      "category": "sweet",
+      "name": "Basque Cheesecake",
+      "description": "Cheesecake panggang dengan tekstur creamy.",
+      "price": 38000,
+      "available": true,
+      "image": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "toast",
+      "category": "sweet",
+      "name": "French Toast",
+      "description": "Brioche, berries, maple, dan vanilla ice cream.",
+      "price": 42000,
+      "available": true,
+      "image": "https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=800&q=80"
+    }
+  ]
+}
