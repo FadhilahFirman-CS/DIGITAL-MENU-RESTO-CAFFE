@@ -1116,3 +1116,249 @@ body {
     gap: 16px 12px;
   }
 }
+
+/* Responsive menu grid: two cards per row on compact screens, then
+   automatically uses the available width on larger displays. */
+.wrap {
+  width: min(100%, 1440px);
+  padding-inline: clamp(16px, 4vw, 64px);
+}
+
+.menu-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  align-items: stretch;
+}
+
+.card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img {
+  aspect-ratio: 4 / 3;
+  height: auto;
+  min-height: 0;
+}
+
+.card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.card-body .btn {
+  margin-top: auto !important;
+}
+
+@media (min-width: 1180px) {
+  .menu-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .wrap {
+    padding-inline: clamp(14px, 4vw, 28px);
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .card-img {
+    aspect-ratio: 1 / 1;
+  }
+
+  .card-body {
+    padding: clamp(10px, 3vw, 16px);
+  }
+
+  .card h3 {
+    font-size: clamp(14px, 4vw, 18px);
+    line-height: 1.2;
+  }
+
+  .card p {
+    font-size: clamp(11px, 3vw, 13px);
+    line-height: 1.45;
+  }
+
+  .price,
+  .available {
+    font-size: clamp(11px, 3vw, 14px);
+  }
+
+  .card-body .btn {
+    padding-inline: 8px;
+    font-size: clamp(11px, 3vw, 14px);
+  }
+}
+
+@media (max-width: 360px) {
+  .site-header {
+    padding-inline: 14px;
+  }
+
+  .site-header nav {
+    gap: 8px;
+    font-size: 11px;
+  }
+
+  .brand small {
+    display: none;
+  }
+}
+
+/* Mobile clarity pass */
+@media (max-width: 480px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  .site-header {
+    height: auto;
+    min-height: 68px;
+    padding-block: 12px;
+    gap: 12px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand > span:last-child {
+    min-width: 0;
+  }
+
+  .brand b {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  .site-header nav {
+    flex-shrink: 0;
+    gap: 10px;
+    font-size: 10px;
+  }
+
+  .wrap {
+    padding-inline: 16px;
+  }
+
+  .hero {
+    padding: 42px 0 28px;
+    gap: 24px;
+  }
+
+  .hero h1 {
+    margin: 12px 0;
+    font-size: clamp(38px, 13vw, 56px);
+    line-height: 0.98;
+  }
+
+  .hero p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .hero-image {
+    min-height: 210px;
+    border-radius: 2px;
+  }
+
+  .toolbar {
+    display: block;
+    margin: 20px 0 18px;
+    padding-top: 18px;
+  }
+
+  .section-title {
+    font-size: 25px;
+  }
+
+  .search {
+    width: 100%;
+    min-width: 0;
+    margin-top: 10px;
+  }
+
+  .categories {
+    margin-inline: -16px;
+    padding-inline: 16px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 18px !important;
+  }
+
+  .card-img {
+    aspect-ratio: 1 / 1;
+  }
+
+  .card-body {
+    padding: 12px;
+    min-width: 0;
+  }
+
+  .card h3 {
+    font-size: clamp(14px, 4.5vw, 18px);
+    line-height: 1.18;
+    min-height: 2.36em;
+    overflow-wrap: anywhere;
+  }
+
+  .card p {
+    min-height: 0;
+    font-size: 11px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .card-body .btn {
+    padding: 10px 6px;
+    font-size: 11px;
+    min-height: 38px;
+  }
+
+  .price,
+  .available {
+    font-size: 11px;
+  }
+
+  .price {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .available {
+    display: block;
+    float: none;
+    margin-top: 5px;
+    line-height: 1.2;
+  }
+
+  .card::after {
+    top: 8px;
+    right: 8px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .site-footer {
+    margin-top: 32px;
+    padding-inline: 16px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 760px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
